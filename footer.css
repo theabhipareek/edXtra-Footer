@@ -4,6 +4,7 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
+
 body {
     width: 100vw;
     height: 100vh;
@@ -11,22 +12,33 @@ body {
     align-items: flex-end;
     overflow: hidden;
 }
+.company{
+    padding-right: 5px;
+}
+
+
 ul {
     list-style: none;
 }
-a {
-    text-decoration: unset;
+
+.footer_a {
+    text-decoration: none;  /* Removed underline */
+    color: inherit; /* Ensure color remains */
 }
-a:hover {
-    text-decoration: underline;
+
+.footer_a:hover {
+    text-decoration: none;  /* Removed underline on hover */
 }
-ul > li > a {
-    color:#fff;
+
+ul > li > .footer_a {
+    color: #fff;
 }
+
 ul > li {
     line-height: 1.5em;
 }
-.footer {
+
+.footer_ {
     display: block;
     width: 100%;
     position: relative;
@@ -39,7 +51,7 @@ ul > li {
     border-top-right-radius: 20px;
 }
 
-.footer-start {
+.footer_footer-start {
     display: flex;
     position: relative;
     width: 90%;
@@ -51,13 +63,15 @@ ul > li {
     align-items: center;
     padding: 70px 100px;
 }
-.start-learning {
+
+.footer_start-learning {
     position: absolute;
     left: 0;
     right: 0;
     top: -150px;
 }
-.footer .inner {
+
+.footer_ .footer_inner {
     display: flex;
     column-gap: 20px;
     row-gap: 20px;
@@ -68,63 +82,75 @@ ul > li {
     text-align: center;
     color: #fff;
 }
-.main-logo {
+
+.footer_main-logo {
     position: relative;
     display: flex;
     align-items: center;
+    text-decoration: none;  /* Removed underline */
+    color: inherit; /* Ensure color remains */
 }
-.main-logo .logo {
+
+.footer_main-logo .footer_logo {
     display: inline-block;
     width: 40px;
     height: 40px;
     margin-right: 10px;
 }
-.main-logo .logo > img {
+
+.footer_main-logo .footer_logo > .footer_img {
     display: block;
     width: 100%;
     min-width: 40px;
 }
-.logo-info {
+
+.footer_logo-info {
     text-align: left;
     line-height: 20px;
 }
-.text {
+
+.footer_text {
     font-size: 17px;
     line-height: 17px;
     color: #fff;
     letter-spacing: .18em;
     font-weight: 600;
 }
-.copyright {
+
+.footer_copyright {
     color: #fff;
     font-size: 12px;
     line-height: 12px;
-}
-.is-logo > a {
-    text-decoration: unset;
+  text-decoration: none;
 }
 
+.footer_is-logo > .footer_a {
+    text-decoration: none;
+}
 
-.footer .column {
+.footer_ .footer_column {
     width: 100%;
     font-size: 14px;
     text-align: left;
 }
-.footer .column .column-title {
+
+.footer_ .footer_column .footer_column-title {
     margin-bottom: 0.5em;
     font-weight: 700;
     font-size: 16px;
 }
-.footer .column .column-title:not(:first-child) {
+
+.footer_ .footer_column .footer_column-title:not(:first-child) {
     margin-top: 1.5em;
 }
 
-.illustration {
+.footer_illustration {
     position: absolute;
     top: -28px;
     left: 8%;
 }
-a.button {
+
+.footer_a.footer_button {
     display: inline-flex;
     position: relative;
     height: 60px;
@@ -139,25 +165,28 @@ a.button {
     font-size: 16px;
     font-weight: 700;
     padding: 0 30px;
-    text-decoration: unset;
+    text-decoration: none;
 }
-.section-title {
+
+.footer_section-title {
     font-size: 44px;
     font-weight: 700;
     color: #fff;
 }
-h3.section-sub-title {
+
+h3.footer_section-sub-title {
     font-size: 22px;
     font-weight: 400;
     color: #fff;
 }
-.section-sub-title span{
+
+.footer_section-sub-title span {
     opacity: 0.6;
 }
-h3.section-sub-title strong {
+
+h3.footer_section-sub-title strong {
     font-weight: 600;
 }
-
 
 @media only screen and (max-width: 990px) and (min-width: 200px) {
     body {
@@ -165,33 +194,44 @@ h3.section-sub-title strong {
         overflow-x: hidden;
         overflow-y: scroll;
     }
-    .footer .inner {
-        display: grid;
-        grid-template-columns: repeat( auto-fit, minmax(200px, 1fr) );
+.footer{
+        padding-top: 20px;
     }
-    .start-learning {
+
+    .footer_ .footer_inner {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .footer_start-learning {
         position: unset;
     }
-    .footer-start {
+
+    .footer_footer-start {
         width: 100%;
         display: block;
         padding: 30px 20px;
         margin: 30px auto;
     }
-    .section-title {
+
+    .footer_section-title {
         font-size: 30px;
     }
-    h3.section-sub-title {
+
+    h3.footer_section-sub-title {
         font-size: 18px;
     }
-    .footer {
-        padding-top:0;
+
+    .footer_ {
+        padding-top: 0;
     }
-    a.button {
+
+    .footer_a.footer_button {
         height: 50px;
         margin-top: 10px;
     }
-    .column.is-logo {
+
+    .footer_column.footer_is-logo {
         order: 4;
     }
-} 
+}
